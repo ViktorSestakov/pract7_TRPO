@@ -1,0 +1,80 @@
+﻿<Window x:Class="pr7_shestakov.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pr7_shestakov"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="825">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel Grid.Row="0">
+                    <TextBlock Text="Имя:"/>
+                    <TextBox Text="{Binding PetName, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Вид:"/>
+                    <TextBox Text="{Binding PetSpecies, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Возраст:"/>
+                    <TextBox Text="{Binding AgeText, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Вес (кг):"/>
+                    <TextBox Text="{Binding WeightText, UpdateSourceTrigger=PropertyChanged}"/>
+                    <CheckBox Content="Пристроен" IsChecked="{Binding PetIsAdopted}"/>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel Grid.Row="1">
+                <Button x:Name="Create" Content="Создать" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Create_Click" Width="190" Margin="6"/>
+                <Button x:Name="Change" Content="Изменить" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Change_Click" Width="190" Margin="6"/>
+                <Button x:Name="ChangeFull" Content="Изменить полностью" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ChangeFull_Click" Width="190" Margin="6"/>
+                <Button x:Name="Del" Content="Удалить" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Del_Click" Width="190" Margin="6"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" Margin="5,0,0,5">
+                <TextBlock Text="Вид:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBox Width="140" Text="{Binding FilterSpecies, UpdateSourceTrigger=PropertyChanged}"/>
+                <ComboBox Width="120" SelectedIndex="{Binding FilterStatus}" Margin="8, 0">
+                    <ComboBoxItem Content="Все"/>
+                    <ComboBoxItem Content="Не пристроены"/>
+                    <ComboBoxItem Content="Пристроены"/>
+                </ComboBox>
+                <Button Content="Применить" x:Name="Apply" Click="Apply_Click" Margin="0,0,5,0"/>
+                <Button Content="Убрать" x:Name="Reset" Click="Reset_Click" Margin="0,0,5,0"/>
+                <Button Content="Обновить" x:Name="Refresh" Click="Refresh_Click"/>
+            </StackPanel>
+
+            <ListView Grid.Row="2" ItemsSource="{Binding Pets}" SelectedItem="{Binding SelectedPet, Mode=TwoWay}" SelectionMode="Single" SelectionChanged="Pets_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Species" DisplayMemberBinding="{Binding Species}"/>
+                        <GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}"/>
+                        <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}"/>
+                        <GridViewColumn Header="Adopted" DisplayMemberBinding="{Binding IsAdopted}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>
