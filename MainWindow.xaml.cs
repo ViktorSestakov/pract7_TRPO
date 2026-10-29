@@ -26,12 +26,12 @@ namespace pr7_shestakov
         public bool IsNotBusy => !busy;
         public ObservableCollection<Pet> Pets { get; } = new();
         public Pet? SelectedPet { get; set; }
-        public string PetName { get; set; } = "";
-        public string PetSpecies { get; set; } = "";
+        public string PetName { get; set; }
+        public string PetSpecies { get; set; }
         public string AgeText { get; set; } = "0";
-        public string WeightText { get; set; } = "";
+        public string WeightText { get; set; }
         public bool PetIsAdopted { get; set; }
-        public string FilterSpecies { get; set; } = "";
+        public string FilterSpecies { get; set; }
         public int FilterStatus { get; set; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -106,9 +106,7 @@ namespace pr7_shestakov
                 throw new Exception("Заполните имя и вид питомца.");
             if (!int.TryParse(AgeText, out int age) || age < 0)
                 throw new Exception("Возраст должен быть целым неотрицательным числом.");
-            if (!decimal.TryParse(WeightText.Trim().Replace(',', '.'),
-                NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign,
-                CultureInfo.InvariantCulture, out decimal weight) || weight <= 0)
+            if (!decimal.TryParse(WeightText.Trim().Replace(',', '.'), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.InvariantCulture, out decimal weight) || weight <= 0)
                 throw new Exception("Вес должен быть числом больше нуля, например 4,5.");
 
             return new Pet
@@ -161,8 +159,7 @@ namespace pr7_shestakov
         private async void Del_Click(object sender, RoutedEventArgs e) => await RunAsync(async () =>
         {
             int id = RequirePet().Id;
-            if (MessageBox.Show("Удалить выбранного питомца?", "Удаление",
-                MessageBoxButton.YesNo) != MessageBoxResult.Yes) return;
+            if (MessageBox.Show("Удалить выбранного питомца?", "Удаление", MessageBoxButton.YesNo) != MessageBoxResult.Yes) return;
             using var response = await hc.DeleteAsync($"{Route}/{id}");
             response.EnsureSuccessStatusCode();
             await RefreshAfterChange();
@@ -171,8 +168,14 @@ namespace pr7_shestakov
         private async Task RefreshAfterChange()
         {
             ClearForm();
-            try { await GetItems(); }
-            catch { throw new Exception("Операция выполнена, но список не обновился. Нажмите «Обновить» после восстановления связи."); }
+            try 
+            { 
+                await GetItems();
+            }
+            catch 
+            { 
+                throw new Exception("Операция выполнена, но список не обновился. Нажмите «Обновить» после восстановления связи.");
+            }
         }
 
         private async Task RunAsync(Func<Task> action)
@@ -180,25 +183,45 @@ namespace pr7_shestakov
             if (busy) return;
             busy = true;
             Notify();
-            try { await action(); }
+            try 
+            { 
+                await action();
+            }
             catch (HttpRequestException ex)
             {
-                MessageBox.Show(ex.StatusCode == null
-                    ? "Сервер недоступен. Проверьте, что API запущен и адрес указан верно."
-                    : $"Ошибка API: {(int) ex.StatusCode.Value}. {ex.Message}");
+                if (ex.StatusCode == null)
+                {
+                    MessageBox.Show("Сервер недоступен. Проверьте, что API запущен и адрес указан верно.");
+                } else
+                {
+                    MessageBox.Show($"Ошибка API: {(int) ex.StatusCode.Value}. {ex.Message}");
+                }
             }
-            catch (TaskCanceledException) { MessageBox.Show("Сервер не ответил за 15 секунд."); }
-            catch (JsonException) { MessageBox.Show("API вернул данные неверного формата."); }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            finally { busy = false; Notify(); }
+            catch (TaskCanceledException) 
+            { 
+                MessageBox.Show("Сервер не ответил за 15 секунд."); 
+            }
+            catch (JsonException) 
+            { 
+                MessageBox.Show("API вернул данные неверного формата."); 
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message); 
+            }
+            finally 
+            { 
+                busy = false; 
+                Notify();
+            }
         }
     }
 
     public class Pet
     {
         public int Id { get; set; }
-        public string Name { get; set; } = "";
-        public string Species { get; set; } = "";
+        public string? Name { get; set; }
+        public string? Species { get; set; }
         public int Age { get; set; }
         public decimal Weight { get; set; }
         public bool IsAdopted { get; set; }

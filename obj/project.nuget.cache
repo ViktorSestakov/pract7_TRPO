@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EJem5rgLjDk=",
+  "dgSpecHash": "u7Fl9m18v1k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\pr7_shestakov.csproj",
+  "projectFilePath": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\pr7_shestakov.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\st310-06\\.nuget\\packages\\materialdesigncolors\\5.4.0\\materialdesigncolors.5.4.0.nupkg.sha512",
     "C:\\Users\\st310-06\\.nuget\\packages\\materialdesignthemes\\5.4.0\\materialdesignthemes.5.4.0.nupkg.sha512",

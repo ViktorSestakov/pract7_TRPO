@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pr7_shestakov")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0284263b9b2f95d679732c1f2db88bd8f3b875f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+691c2e4f0778c30f56cd583f25b96a4e0faf9a25")]
 [assembly: System.Reflection.AssemblyProductAttribute("pr7_shestakov")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pr7_shestakov")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

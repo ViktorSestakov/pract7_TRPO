@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\",
+  "WorkspaceRootPath": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_shestakov.csproj|c:\\users\\st310-06\\documents\\shestakov\\pr7_trpo\\pr7_shestakov\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_shestakov.csproj|c:\\users\\st310-06\\documents\\shestakov\\pr7_trpo\\pract7_trpo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_shestakov.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_shestakov.csproj|c:\\users\\st310-06\\documents\\shestakov\\pr7_trpo\\pr7_shestakov\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_shestakov.csproj|c:\\users\\st310-06\\documents\\shestakov\\pr7_trpo\\pract7_trpo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_shestakov.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -28,23 +28,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-21T03:51:42.292Z",
+              "WhenOpened": "2026-10-29T04:05:17.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAiwEUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-21T03:51:38.95Z",
               "EditorCaption": ""

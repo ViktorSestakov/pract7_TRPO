@@ -348,11 +348,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\pr7_shestakov.csproj",
+      "projectUniqueName": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\pr7_shestakov.csproj",
       "projectName": "pr7_shestakov",
-      "projectPath": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\pr7_shestakov.csproj",
+      "projectPath": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\pr7_shestakov.csproj",
       "packagesPath": "C:\\Users\\st310-06\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pr7_shestakov\\obj\\",
+      "outputPath": "C:\\Users\\st310-06\\Documents\\shestakov\\pr7_TRPO\\pract7_TRPO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
